@@ -4,8 +4,8 @@ import { info } from '@actions/core';
 
 function purgeZone(zoneId: string, zoneKey: string) {
 
-  return fetch(`https://bunnycdn.com/api/pullzone/purgeCache?id=${zoneId}`, {
-    method: 'GET',
+  return fetch(`https://api.bunny.net/pullzone/${zoneId}/purgeCache`, {
+    method: 'POST',
     headers: {
       "AccessKey": zoneKey,
     }
