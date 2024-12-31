@@ -14,7 +14,7 @@ function uploadFile(entry: readdirp.EntryInfo, storageName: string, accessKey: s
     body: readStream
   }).then(response => {
     if (response.status === 201) {
-      info(`Successfull deployment of ${entry.path}`);
+      info(`Successfully deployed ${entry.path}`);
     } else {
       throw new Error(`Uploading ${entry.path} has failed width status code ${response.status}.`);
     }
